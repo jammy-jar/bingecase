@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Signika } from "next/font/google";
-import localFont from 'next/font/local';
 import Header from './header'
+import { signika } from "./font";
 
 import "./globals.css";
-
-const signika = Signika({ subsets: ["latin"] });
-export const zain = localFont({ src: '../../fonts/zain/Zain-ExtraBold.ttf' })
 
 export const metadata: Metadata = {
   title: "BingeCase",

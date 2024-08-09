@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
-import { zain } from './layout';
+import { zain } from './font';
 
 export default function Header() {
   return (

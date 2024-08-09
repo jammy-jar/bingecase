@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Signika } from "next/font/google";
+import localFont from 'next/font/local';
+import Header from './header'
+
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const signika = Signika({ subsets: ["latin"] });
+export const zain = localFont({ src: '../../fonts/zain/Zain-ExtraBold.ttf' })
 
 export const metadata: Metadata = {
   title: "BingeCase",
@@ -16,7 +20,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${signika.className} antialiased`}>
+        <div className="bg-zinc-900">
+          <Header />
+          <main>{children}</main>
+          <footer className="flex justify-between items-center flex-wrap py-2 px-6 border-t border-slate-900/10">
+            <div className="w-full block flex-grow">
+              <div><p className="block">test</p></div>
+              <div>
+                <p className="block">James Rose</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </body>
     </html>
   );
 }

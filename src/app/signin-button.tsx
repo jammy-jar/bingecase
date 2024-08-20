@@ -27,7 +27,7 @@ export default function SignIn() {
           <p>Sign in</p>
         </button>
         <button className={clsx("py-0.5 border-b text-sm hover:border-teal-300 hover:text-teal-300 transition-colors duration-300 ease-in-out border-zinc-300 text-zinc-300 w-1/2", {"border-teal-300 text-teal-300" : makeNewAccount})} onClick={() => setMakeNewAccount(true)}>
-          <p>I don't have an account</p>
+          <p>I don&#39;t have an account</p>
         </button>
       </div>
       <button className="flex m-auto mt-6 mb-6 bg-sky-600 py-2 px-5 rounded-2xl">

@@ -16,19 +16,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${signika.className} antialiased`}>
-        <div className="bg-zinc-900">
-          <Header />
-          <main>{children}</main>
-          <footer className="flex justify-between items-center flex-wrap py-2 px-6 border-t border-slate-900/10">
-            <div className="w-full block flex-grow">
-              <div><p className="block">test</p></div>
-              <div>
-                <p className="block">James Rose</p>
-              </div>
+      <body className={`${signika.className} antialiased bg-zinc-900`}>
+        <Header />
+        <main>{children}</main>
+        <footer className="flex justify-between items-center flex-wrap py-2 px-6 border-t border-slate-900/10">
+          <div className="w-full block flex-grow">
+            <div><p className="block">test</p></div>
+            <div>
+              <p className="block">James Rose</p>
             </div>
-          </footer>
-        </div>
+          </div>
+        </footer>
       </body>
     </html>
   );

@@ -1,6 +1,10 @@
+"use client"
+
 import Image from "next/image";
 import Link from 'next/link';
 import { zain } from './font';
+import React from "react";
+import SignIn from "./signin-button";
 
 export default function Header() {
   return (
@@ -18,8 +22,8 @@ export default function Header() {
         </Link>
       </div>
       <div className="block sm:hidden">
-        <button className="flex items-center px-3 py-2 border rounded border-slate-900/20 hover:text-slate-900 hover:border-white">
-          <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+        <button className="flex items-center px-3 py-2 hover:text-zinc-400">
+          <svg className="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
         </button>
       </div>
       <div className="hidden w-full flex-grow sm:flex sm:items-center sm:w-auto">
@@ -34,11 +38,7 @@ export default function Header() {
             Bracket
           </Link>
         </div>
-        <div>
-          <button className="block mt-4 sm:inline-block sm:mt-0 border px-3 py-1 rounded-2xl text-zinc-300 border-zinc-300">
-            Sign in
-          </button>
-        </div>
+        <SignIn />
       </div>
     </nav>
   </header>

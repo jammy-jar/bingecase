@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Header from './header'
-import { signika } from "./font";
+import Header from '@/app/header'
+import { signika } from "@/app/font";
 
 import "./globals.css";
 
@@ -16,18 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${signika.className} antialiased bg-zinc-900`}>
-        <Header />
-        <main>{children}</main>
-        <footer className="flex justify-between items-center flex-wrap py-2 px-6 border-t border-slate-900/10">
-          <div className="w-full block flex-grow">
-            <div><p className="block">test</p></div>
-            <div>
-              <p className="block">James Rose</p>
-            </div>
-          </div>
-        </footer>
-      </body>
+      <body className={`${signika.className} antialiased bg-zinc-900`}>{children}</body>
     </html>
   );
 }

@@ -1,6 +1,9 @@
+import Header from "@/app/header";
+
 export default function Home() {
   return (
-    <div>
+    <main>
+      <Header />
       <section className="mx-16 sm:mx-32 mt-40 mb-64 flex w-auto sm:w-96 items-center text-center sm:text-left">
         <div>
           <h2 className="font-bold text-4xl tracking-tight">Compare your favourite Books, Movies, TV Shows and Music!</h2>
@@ -18,7 +21,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+      <footer className="flex justify-between items-center flex-wrap py-2 px-6 border-t border-slate-900/10">
+          <div className="w-full block flex-grow">
+            <div><p className="block">test</p></div>
+            <div>
+              <p className="block">James Rose</p>
+            </div>
+          </div>
+        </footer>
+    </main>
+    
     );
   }
   

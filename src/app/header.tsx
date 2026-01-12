@@ -2,16 +2,16 @@
 
 import Image from "next/image";
 import Link from 'next/link';
-import { zain } from './font';
+import { zain } from '@/app/font';
 import React from "react";
-import SignIn from "./signin-button";
+import SignInButton from "@/app/signin-button";
 
 export default function Header() {
   return (
   <header className="sticky top-0">
     <nav className="flex items-center justify-between flex-wrap py-3 px-6 border-b border-zinc-600">
       <div className="flex items-center flex-shrink-0 mr-12">
-        <Link className="flex items-center" href="./">
+        <Link className="flex items-center" href="../">
           <Image
             src="/logo-dark.png"
             width={38}
@@ -28,17 +28,17 @@ export default function Header() {
       </div>
       <div className="hidden w-full flex-grow sm:flex sm:items-center sm:w-auto">
         <div className="sm:flex-grow text-zinc-300 font-light">
-          <Link href="./library" className="block mt-4 sm:inline-block sm:mt-0 hover:text-slate-600 mr-12">
+          <Link href="../dashboard/library" className="block mt-4 sm:inline-block sm:mt-0 hover:text-slate-600 mr-12">
             Library
           </Link>
-          <Link href="./find" className="block mt-4 sm:inline-block sm:mt-0 hover:text-slate-600 mr-12">
+          <Link href="../find" className="block mt-4 sm:inline-block sm:mt-0 hover:text-slate-600 mr-12">
             Search
           </Link>
-          <Link href="./bracket" className="block mt-4 sm:inline-block sm:mt-0 hover:text-slate-600 mr-12">
+          <Link href="../bracket" className="block mt-4 sm:inline-block sm:mt-0 hover:text-slate-600 mr-12">
             Bracket
           </Link>
         </div>
-        <SignIn />
+        <SignInButton />
       </div>
     </nav>
   </header>
